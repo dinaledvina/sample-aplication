@@ -8,6 +8,7 @@ group :development do
 end
 
 group :test do
+  gem 'autotest'
   gem 'rspec-rails', '2.6.1'
   gem 'webrat', '0.7.1'
 end
