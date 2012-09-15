@@ -81,8 +81,23 @@ describe PagesController do
     it "should have the right content" do
       get 'help'
       response.should have_selector("p",
-                        :content => "This is the help page for the")
+                        :content => "Get help on Ruby on Rails Tutorial at the")
     end
+
+
+describe "GET 'about'" do
+    it "should be_succsessful" do
+      get 'about'
+      response.should be_success
+    end
+
+    it "should have the right header" do
+     get 'about'
+     response.should have_selector("h1",
+                       :content =>  "About Us")
+    
+    end
+end
 
                          
    
